@@ -1,3 +1,18 @@
 # CAP2757
-data exploration, descriptive statistics, exploratory data analysis (EDA), and visualization using pandas, Plotly Express, and Streamlit. Students will work with a real-world dataset collected from a marine environment and follow a structured workflow to analyze the data.
-This project is a comprehensive data exploration and visualization lab focused on marine environmental data from Biscayne Bay. It demonstrates the full data science lifecycle, from initial data loading and cleaning to statistical analysis and the deployment of an interactive web application.Project ObjectiveThe primary goal is to analyze real-world water quality data to identify environmental trends and anomalies. The project applies core data science techniques including descriptive statistics, correlation analysis, and outlier detection to gain meaningful insights into the health of the Biscayne Bay ecosystem.Key FeaturesAutomated Data Exploration: Uses Python and Pandas to load datasets and perform initial health checks, such as identifying data types and missing values.Statistical Analysis: Computes summary statistics to understand data distribution and spread.Relational Mapping: Generates covariance and correlation matrices to discover relationships between environmental variables like temperature and salinity.Outlier Detection: Implements the Interquartile Range (IQR) method to detect and handle data anomalies or sensor errors.Data Visualization: Utilizes Plotly Express to create interactive scatter plots and histograms that highlight clusters and trends.Interactive Dashboard: A functional Streamlit application that allows users to toggle raw data views and explore interactive charts in real-time.DatasetThe analysis is performed on the Biscayne Bay Water Quality Dataset. This dataset includes critical parameters such as:Salinity (psu) Temperature (°C) pH Levels Dissolved Oxygen (ODO mg/L) Turbidity (FNU) Technology StackLanguage: Python Data Manipulation: Pandas Visualization: Plotly Express Web Framework: Streamlit How to Run the ProjectEnsure you have Python installed.Install the required libraries: pip install pandas plotly streamlit.To view the interactive dashboard, run: streamlit run dashboard.py.
+# Biscayne Bay Water Quality Analysis
+
+This project analyzes and visualizes water quality data from Biscayne Bay. It utilizes Python for statistical exploration and a Streamlit dashboard to present environmental insight.
+
+## Project Overview
+[cite_start]This repository demonstrates a complete data science workflow for marine environmental data[cite: 27]. The project covers the following areas:
+* [cite_start]**Data Exploration**: Loading datasets and inspecting structures for missing values[cite: 6, 34].
+* [cite_start]**Statistical Analysis**: Computing descriptive statistics to identify trends or anomalies[cite: 6, 39].
+* [cite_start]**Correlation Studies**: Analyzing relationships between features like temperature, salinity, and pH[cite: 6, 43].
+* [cite_start]**Outlier Detection**: Using the Interquartile Range (IQR) method to identify sensor errors[cite: 6, 48].
+* [cite_start]**Interactive Visualization**: Creating a web-based dashboard for dynamic data exploration[cite: 6, 59].
+
+## Installation
+[cite_start]To run the analysis or launch the dashboard, install the necessary libraries using pip[cite: 31]:
+
+```bash
+pip install pandas plotly streamlit
