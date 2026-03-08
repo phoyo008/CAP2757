@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 # Title
-st.title("🌊 Biscayne Bay Water Quality Explorer")
+st.title("Biscayne Bay Water Quality Explorer")
 st.markdown("Lab 1: Data Exploration and Visualization")
 st.markdown("---")
 
@@ -33,16 +33,16 @@ df = load_data()
 st.sidebar.header("Dashboard Controls")
 
 # Checkbox to show/hide raw data
-show_raw_data = st.sidebar.checkbox("📋 Show Raw Data Preview", value=False)
+show_raw_data = st.sidebar.checkbox("Show Raw Data Preview", value=False)
 
 # Checkbox to show statistics
-show_stats = st.sidebar.checkbox("📈 Show Summary Statistics", value=True)
+show_stats = st.sidebar.checkbox("Show Summary Statistics", value=True)
 
 # Checkbox to show correlation matrix
-show_corr = st.sidebar.checkbox("🔗 Show Correlation Matrix", value=True)
+show_corr = st.sidebar.checkbox("Show Correlation Matrix", value=True)
 
 # Checkbox to show visualizations
-show_viz = st.sidebar.checkbox("📊 Show Visualizations", value=True)
+show_viz = st.sidebar.checkbox("Show Visualizations", value=True)
 
 st.sidebar.markdown("---")
 st.sidebar.info("""
@@ -65,22 +65,21 @@ with col3:
 
 st.markdown("---")
 
-# ============================================================================
+
 # SECTION 1: RAW DATA PREVIEW
-# ============================================================================
+
 if show_raw_data:
-    st.subheader("📋 Raw Dataset Preview")
+    st.subheader("Raw Dataset Preview")
     st.write(f"Showing first 10 rows of {len(df)} total samples:")
     st.dataframe(df.head(10), use_container_width=True)
 
     st.write("\n**Dataset Info:**")
     st.text(str(df.info()))
 
-# ============================================================================
 # SECTION 2: SUMMARY STATISTICS
-# ============================================================================
+
 if show_stats:
-    st.subheader("📈 Summary Statistics")
+    st.subheader("Summary Statistics")
     st.write("Statistical summary of all numeric columns:")
 
     # Show summary statistics
@@ -88,7 +87,7 @@ if show_stats:
     st.dataframe(summary.round(4), use_container_width=True)
 
     # Key observations
-    with st.expander("📝 Key Observations", expanded=True):
+    with st.expander("Key Observations", expanded=True):
         st.write("""
         **Temperature (Temp °C):**
         - Mean: ~27.6°C, Range: 26.8 - 28.9°C
@@ -115,9 +114,9 @@ if show_stats:
         - Should be removed for clean analysis
         """)
 
-# ============================================================================
+
 # SECTION 3: CORRELATION ANALYSIS
-# ============================================================================
+
 if show_corr:
     st.subheader("🔗 Correlation Analysis")
 
@@ -148,11 +147,11 @@ if show_corr:
     for i, (var1, var2, r) in enumerate(corr_pairs[:5], 1):
         st.write(f"{i}. **{var1}** ↔ **{var2}**: r = {r:.4f}")
 
-# ============================================================================
+
 # SECTION 4: VISUALIZATIONS
-# ============================================================================
+
 if show_viz:
-    st.subheader("📊 Data Visualizations")
+    st.subheader("Data Visualizations")
 
     # Create two columns for side-by-side plots
     col1, col2 = st.columns(2)
@@ -210,9 +209,9 @@ if show_viz:
     fig_hist_temp.update_layout(height=400)
     st.plotly_chart(fig_hist_temp, use_container_width=True)
 
-# ============================================================================
+
 # SECTION 5: OUTLIER INFORMATION
-# ============================================================================
+
 st.markdown("---")
 st.subheader("🧹 Outlier Detection Notes")
 
@@ -241,9 +240,8 @@ with st.expander("View Outlier Analysis", expanded=False):
     represent real environmental variations (freshwater zones, different water masses).
     """)
 
-# ============================================================================
 # FOOTER
-# ============================================================================
+
 st.markdown("---")
 st.markdown("""
 **Lab 1: Data Exploration and Visualization**
